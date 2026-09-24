@@ -1,6 +1,33 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 
+function ArrowIcon() {
+  return (
+    <svg
+      className="arrow-icon"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <path
+        d="M5 19L19 5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M9 5H19V15"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -109,7 +136,10 @@ function App() {
               style={{ '--delay': '210ms' }}
             >
               Conheça a NØVA
-              <span>↗</span>
+
+              <span className="button-arrow">
+                <ArrowIcon />
+              </span>
             </a>
 
           </div>
@@ -193,7 +223,7 @@ function App() {
               </div>
 
               <span className="arrow">
-                ↗
+                <ArrowIcon />
               </span>
 
             </article>
@@ -218,7 +248,7 @@ function App() {
               </div>
 
               <span className="arrow">
-                ↗
+                <ArrowIcon />
               </span>
 
             </article>
@@ -243,7 +273,7 @@ function App() {
               </div>
 
               <span className="arrow">
-                ↗
+                <ArrowIcon />
               </span>
 
             </article>
@@ -387,7 +417,10 @@ function App() {
             className="primary-button light"
           >
             Agendar avaliação
-            <span>↗</span>
+
+            <span className="button-arrow">
+              <ArrowIcon />
+            </span>
           </a>
 
         </section>
